@@ -1,5 +1,8 @@
 # Mini applications
 
+This is just the exercise boilerplate, the answers are in the [final-version](https://github.com/andreriffen/PHP-OOP-Projects/tree/final-version) branch.
+You can also see the instructor's changes by acessing the [original repository](https://github.com/thecodeholic/PHP-OOP-Projects/tree/final-version); it's essentially the same code.
+
 ## 📚 Use Case Library
 
 Greetings [@everyone](#-use-case-library)🖖
