@@ -28,7 +28,7 @@ Generate some basic information by creating new files. Read information by parsi
 - Create reusable functions for file parsing and generation.
 - Use a single source of truth for file format specifications.
 
-### 🛒 Shopping Cart
+### 🛒 Shopping Cart (done)
 
 For this one, probably the simplest way to demonstrate is saving products to a cookie locally, then merging to the DB. Certainly, customers will have products in both.
 
