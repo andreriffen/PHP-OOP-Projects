@@ -27,7 +27,5 @@ echo $cart->getTotalSum().PHP_EOL; // This must print 3700
 $cart->removeProduct($product1);
 
 echo "Number of items in cart: ".PHP_EOL;
-echo $cart->getTotalQuantity().PHP_EOL; // This must print 4
+echo $cart->getTotalQuantity().PHP_EOL; // This must print 1
 
-echo "Total price of items in cart: ".PHP_EOL;
-echo $cart->getTotalSum().PHP_EOL; // This must print 3700

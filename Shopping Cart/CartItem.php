@@ -6,18 +6,51 @@ class CartItem
     private Product $product;
     private int $quantity;
 
-    // TODO Generate constructor with all properties of the class
-    // TODO Generate getters and setters of properties
-
-    public function increaseQuantity()
+    /**
+     * CartItem constructor.
+     *
+     * @param Product $product
+     * @param int      $quantity
+     */
+    public function __construct(Product $product, int $quantity)
     {
-        //TODO $quantity must be increased by one.
-        // Bonus: $quantity must not become more than whatever is Product::$availableQuantity
+        $this->product = $product;
+        $this->quantity = $quantity;
     }
 
-    public function decreaseQuantity()
+    public function getProduct(): Product
     {
-        //TODO $quantity must be increased by one.
-        // Bonus: Quantity must not become less than 1
+        return $this->product;
+    }
+
+    public function setProduct(Product $product): void
+    {
+        $this->product = $product;
+    }
+
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): void
+    {
+        $this->quantity = $quantity;
+    }
+
+    public function increaseQuantity($amount=1)
+    {
+        if ($this->getQuantity()+$amount>$this->getProduct()->getAvailableQuantity()){
+            throw new Exception("Product quantity cannot be more than ".$this->getProduct()->getAvailableQuantity());
+        }
+        $this->quantity += $amount;
+    }
+
+    public function decreaseQuantity($amount=1)
+    {
+        if ($this->getQuantity()-$amount<1){
+            throw new Exception("Product quantity cannot be less than 1");
+        }
+        $this->quantity -= $amount;
     }
 }
