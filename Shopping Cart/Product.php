@@ -70,7 +70,6 @@ class Product
      * @param Cart $cart
      * @param int $quantity
      * @return CartItem
-     * @throws Exception
      */
     public function addToCart(Cart $cart, int $quantity): CartItem
     {

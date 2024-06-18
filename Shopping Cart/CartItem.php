@@ -38,6 +38,9 @@ class CartItem
         $this->quantity = $quantity;
     }
 
+    /**
+     * @throws Exception
+     */
     public function increaseQuantity($amount=1)
     {
         if ($this->getQuantity()+$amount>$this->getProduct()->getAvailableQuantity()){
@@ -46,6 +49,9 @@ class CartItem
         $this->quantity += $amount;
     }
 
+    /**
+     * @throws Exception
+     */
     public function decreaseQuantity($amount=1)
     {
         if ($this->getQuantity()-$amount<1){

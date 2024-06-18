@@ -20,13 +20,12 @@ class Cart
      * Add Product $product into cart. If product already exists inside cart
      * it must update quantity.
      * This must create CartItem and return CartItem from method
-     * Bonus: $quantity must not become more than whatever
-     * is $availableQuantity of the Product
+     * Bonus: `$quantity` must not become more than whatever
+     * is `$availableQuantity` of the Product
      *
      * @param Product $product
      * @param int $quantity
      * @return CartItem
-     * @throws Exception
      */
     public function addProduct(Product $product, int $quantity)
     {
